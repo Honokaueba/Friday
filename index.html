@@ -4,10 +4,43 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
     <link rel="stylesheet" href="style.css" />
-    <title>My Portfolio</title>
   </head>
   <body>
-    kjfadgaj akjglajdg kjgajg
+    <div class="nice-effect">
+      <span class="person-overlay"> </span>
+      <img
+        src="https://c.files.bbci.co.uk/12A9B/production/_111434467_gettyimages-1143489763.jpg"
+      />
+    </div>
+
+    <!-- JQUERY LINK -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- LETTERING -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js"></script>
+    <!-- ANIME JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        //   $(".name, .student, .small-intro").lettering();
+
+        anime({
+          targets: ".person-overlay",
+          translateX: "2000",
+          delay: 100,
+          duration: 1500,
+          easing: "easeInSine",
+        });
+
+        anime({
+          targets: "img",
+          opacity: 1,
+          delay: 150,
+          duration: 1500,
+          easing: "easeInSine",
+        });
+      });
+    </script>
   </body>
 </html>
